@@ -1,0 +1,6 @@
+[DP, DPS, Burst]
+[TP, TM, Sustain]
+[CCP, CCS, Hard]
+[MP, ME, Reposition]
+[UP, UD, Offensive]
+[RP, RA, Abilities]

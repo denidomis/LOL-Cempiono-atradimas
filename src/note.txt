@@ -1,0 +1,83 @@
+  <table id="myTable" border=1 class="inlineTable">
+      <tr>
+        <td id=damage></td>
+        <td id=damage>Priority</td>
+        <td id=damage>DPS</td>
+        <td id=damage>Burst</td>
+      </tr>
+      <tr>
+        <td id=damage id="glow">Damage</td>
+        <td id=damage><input type="number" id="name1" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage><input type="number" id="name2" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage id=l onchange="myFunction();">5</td>
+      <tr>
+        <td id=damage1></td>
+        <td id=damage1>Priority</td>
+        <td id=damage1>Mitigation</td>
+        <td id=damage1>Sustain</td>
+      </tr>
+      <tr>
+        <td id=damage1 id=glow>Toughness</td>
+        <td id=damage1><input type="number" id="name3" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage1><input type="number" id="name4" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage1 id=k onchange="myFunction();">5</td>
+      </tr>
+      <tr>
+        <td id=damage2></td>
+        <td id=damage2>Priority</td>
+        <td id=damage2>Soft</td>
+        <td id=damage2>Hard</td>
+      </tr>
+      <tr>
+        <td id=damage2 id=glow>Croud control</td>
+        <td id=damage2><input type="number" id="name5" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage2><input type="number" id="name6" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage2 id=j onchange="myFunction();">5</td>
+      </tr>
+      <tr>
+        <td id=damage3></td>
+        <td id=damage3>Priority</td>
+        <td id=damage3>Engage</td>
+        <td id=damage3>Reposition</td>
+      </tr>
+    </tr>
+    <tr>
+      <tr>
+        <td id=damage3 id=glow>Mobility</td>
+        <td id=damage3><input type="number" id="name7" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage3><input type="number" id="name8" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage3 id=h onchange="myFunction();">5</td>
+      </tr>
+      <tr>
+        <td id=damage4></td>
+        <td id=damage4>Priority</td>
+        <td id=damage4>Defensive</td>
+        <td id=damage4>Offensive</td>
+      </tr>
+      <tr>
+        <td id=damage4 id=glow>Utility</td>
+        <td id=damage4><input type="number" id="name9" name="name" required
+          minlength="4" maxlength="8" size="10">
+        </td>
+        <td id=damage4><input type="number" id="name10" name="name" required
+          minlength="4" maxlength="8" size="10" onchange="myFunction();">
+        </td>
+        <td id=damage4 id=y >5</td>
+      </tr>
+    </table>

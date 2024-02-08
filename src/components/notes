@@ -1,0 +1,487 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Find your champion</title>
+        <div id="root" />
+        <h2>write down how many points you want to give to each section</h2>
+        <div id="table1" />
+
+
+
+        html:
+        <table border=1 class="inlineTable" id="table2">
+      <tr>
+          <td></td>
+          <td>Weighted</td>
+          <td>Damage</td>
+          <td>Toughness</td>
+          <td>Crowd Control</td>
+          <td>Mobility</td>
+          <td>Utility</td>
+      </tr>
+      <tr class="Assassins">
+        <td>Assassins</td>
+        <td>0</td>
+        <td>5</td>
+        <td>15</td>
+        <td>10</td>
+        <td>2</td>
+        <td>15</td>
+    </tr>
+    <tr class="Skirmishers">
+      <td>Skirmishers</td>
+      <td>0</td>
+      <td>2</td>
+      <td>9</td>
+      <td>13</td>
+      <td>4</td>
+      <td>15</td>
+  </tr>
+  <tr class="Divers">
+    <td>Divers</td>
+    <td>0</td>
+    <td>9</td>
+    <td>6</td>
+    <td>7</td>
+    <td>1</td>
+    <td>15</td>
+</tr>
+<tr class="Juggernauts">
+  <td>Juggernauts</td>
+  <td>0</td>
+  <td>4</td>
+  <td>4</td>
+  <td>14</td>
+  <td>16</td>
+  <td>15</td>
+</tr>
+<tr class="Vanguards">
+  <td>Vanguards</td>
+  <td>0</td>
+  <td>10</td>
+  <td>0</td>
+  <td>4</td>
+  <td>3</td>
+  <td>9</td>
+</tr>
+<tr class="Wardens">
+  <td>Wardens</td>
+  <td>0</td>
+  <td>10</td>
+  <td>1</td>
+  <td>4</td>
+  <td>7</td>
+  <td>4</td>
+</tr>
+<tr class="Catchers">
+  <td>Catchers</td>
+  <td>0</td>
+  <td>8</td>
+  <td>10</td>
+  <td>4</td>
+  <td>7</td>
+  <td>6</td>
+</tr>
+<tr class="Enchanters">
+  <td>Enchanters</td>
+  <td>0</td>
+  <td>15</td>
+  <td>15</td>
+  <td>7</td>
+  <td>15</td>
+  <td>2</td>
+</tr>
+<tr class="Artillery Mages">
+  <td>Artillery Mages</td>
+  <td>0</td>
+  <td>3</td>
+  <td>14</td>
+  <td>9</td>
+  <td>15</td>
+  <td>15</td>
+</tr>
+<tr class="Burst Mages">
+  <td>Burst Mages</td>
+  <td>0</td>
+  <td>4</td>
+  <td>14</td>
+  <td>7</td>
+  <td>10</td>
+  <td>13</td>
+</tr>
+<tr class="Battle Mages">
+  <td>Battle Mages</td>
+  <td>0</td>
+  <td>1</td>
+  <td>10</td>
+  <td>9</td>
+  <td>16</td>
+  <td>16</td>
+</tr>
+<tr class="Marksmen">
+  <td>Marksmen</td>
+  <td>0</td>
+  <td>0</td>
+  <td>16</td>
+  <td>14</td>
+  <td>13</td>
+  <td>13</td>
+</tr>
+  </table>
+ 
+  <table class="answers" style="width:50%">
+    <tr>
+      <th class="answers1">1st</td>
+    </tr>
+    <tr>
+      <th class="answers2">2nd</td>
+    </tr>
+    <tr>
+      <th class="answers3">3rd</td>
+    </tr>
+  </table>
+
+<script>
+
+
+
+</script>
+
+
+
+
+const data = React.useMemo(
+    () => [
+      {
+        col1: "",
+        col2: "Pirmenybė",
+        col3: "ŽPS",
+        col4: "Staigus šaudymas",
+      },
+      {
+        col1: "Žala",
+        col2: <input type="number" id="DP" />,
+        col3: (
+          <input
+            type="number"
+            name="DPS"
+            id="DPS"
+            onChange={QuickChange.bind(this)}
+          />
+        ),
+        col4: Burst,
+      },
+      {
+        col1: "",
+        col2: "Pirmenybė",
+        col3: "Sušvelninimas",
+        col4: "Išlaikymas",
+      },
+      {
+        col1: "Tvirtumas",
+        col2: <input type="number" id="tP" />,
+        col3: (
+          <input
+            type="number"
+            name="TM"
+            id="TM"
+            onChange={QuickChange.bind(this)}
+          />
+        ),
+        col4: Sustain,
+      },
+      {
+        col1: "",
+        col2: "Pirmenybė",
+        col3: "Minkštas",
+        col4: "kietas",
+      },
+      {
+        col1: "Minios valdymas",
+        col2: <input type="number" id="CCP" />,
+        col3: (
+          <input
+            type="number"
+            name="CCS"
+            id="CCS"
+            onChange={QuickChange.bind(this)}
+          />
+        ),
+        col4: Hard,
+      },
+      {
+        col1: "",
+        col2: "Pirmenybė",
+        col3: "Užvedimas",
+        col4: "Perdėlioti",
+      },
+      {
+        col1: "Mobilumas",
+        col2: <input type="number" id="MP" />,
+        col3: (
+          <input
+            type="number"
+            name="ME"
+            id="ME"
+            onChange={QuickChange.bind(this)}
+          />
+        ),
+        col4: Reposition,
+      },
+      {
+        col1: "",
+        col2: "Pirmenybė",
+        col3: "Gynybinis",
+        col4: "Agresyvus",
+      },
+      {
+        col1: "Naudingumas",
+        col2: <input type="number" id="UP" />,
+        col3: (
+          <input
+            type="number"
+            name="UD"
+            id="UD"
+            onChange={QuickChange.bind(this)}
+          />
+        ),
+        col4: Offensive,
+      },
+    ],
+    []
+  );
+
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: "",
+        accessor: "col1", // accessor is the "key" in the data
+      },
+      {
+        Header: "",
+        accessor: "col2",
+      },
+      {
+        Header: "",
+        accessor: "col3",
+      },
+      {
+        Header: "",
+        accessor: "col4",
+      },
+    ],
+    []
+  );
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable({ columns, data });
+
+  return (
+    <table {...getTableProps()} style={{ border: "solid 1px blue" }}>
+      <thead>
+        {headerGroups.map((headerGroup) => (
+          <tr {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column) => (
+              <th
+                {...column.getHeaderProps()}
+                style={{
+                  borderBottom: "solid 2px grey",
+                  background: "red",
+                  color: "black",
+                  fontWeight: "bold",
+                }}
+              >
+                {column.render("Header")}
+              </th>
+            ))}
+          </tr>
+        ))}
+      </thead>
+      <tbody {...getTableBodyProps()}>
+        {rows.map((row) => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map((cell) => {
+                return (
+                  <td
+                    {...cell.getCellProps()}
+                    style={{
+                      padding: "10px",
+                      border: "solid 2px gray",
+                      background: "rgba(1, 1, 63, 0.568)",
+                      opacity: 0.8,
+                    }}
+                  >
+                    {cell.render("Cell")}
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+
+
+    /* useEffect(() => {
+      if ((First = Weighted1)) {
+        setone = "Žudikai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted2)) {
+        setone = "Kovotojas";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted3)) {
+        setone = "Narai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted4)) {
+        setone = "Griaunamoji jėga";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted5)) {
+        setone = "Avangardai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted6)) {
+        setone = "Prižiūrėtojai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted7)) {
+        setone = "Gaudytojai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted8)) {
+        setone = "Užkerėtojai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted9)) {
+        setone = "Artilerijos magai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted10)) {
+        setone = "Spartieji magai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted11)) {
+        setone = "Mūšio magai";
+      } else {
+        setone = "";
+      }
+      if ((First = Weighted12)) {
+        setone = "Šauliai";
+      } else {
+        setone = "";
+      }
+    }, [
+      First,
+      Weighted1,
+      Weighted2,
+      Weighted3,
+      Weighted4,
+      Weighted5,
+      Weighted6,
+      Weighted7,
+      Weighted8,
+      Weighted9,
+      Weighted10,
+      Weighted11,
+      Weighted12,
+    ]);
+    
+    if ((Second = Weighted1)) {
+      const two = "Žudikai";
+    }else{two = "";}
+    if ((Second = Weighted2)) {
+      const two = "Kovotojas";
+    }else{two = "";}
+    if ((Second = Weighted3)) {
+      const two = "Narai";
+    }else{two = "";}
+    if ((Second = Weighted4)) {
+      const two = "Griaunamoji jėga";
+    }else{two = "";}
+    if ((Second = Weighted5)) {
+      const two = "Avangardai";
+    }else{two = "";}
+    if ((Second = Weighted6)) {
+      const two = "Prižiūrėtojai";
+    }else{two = "";}
+    if ((Second = Weighted7)) {
+      const two = "Gaudytojai";
+    }else{two = "";}
+    if ((Second = Weighted8)) {
+      const two = "Užkerėtojai";
+    }else{two = "";}
+    if ((Second = Weighted9)) {
+      const two = "Artilerijos magai";
+    }else{two = "";}
+    if ((Second = Weighted10)) {
+      const two = "Spartieji magai";
+    }else{two = "";}
+    if ((Second = Weighted11)) {
+      const two = "Mūšio magai";
+    }else{two = "";}
+    if ((Second = Weighted12)) {
+      const two = "Šauliai";
+    }else{two = "";}
+    if ((Third = Weighted1)) {
+      const three = "Žudikai";
+    }else{three = "";}
+    if ((Third = Weighted2)) {
+      const three = "Kovotojas";
+    }else{three = "";}
+    if ((Third = Weighted3)) {
+      const three = "Narai";
+    }else{three = "";}
+    if ((Third = Weighted4)) {
+      const three = "Griaunamoji jėga";
+    }else{three = "";}
+    if ((Third = Weighted5)) {
+      const three = "Avangardai";
+    }else{three = "";}
+    if ((Third = Weighted6)) {
+      const three = "Prižiūrėtojai";
+    }else{three = "";}
+    if ((Third = Weighted7)) {
+      const three = "Gaudytojai";
+    }else{three = "";}
+    if ((Third = Weighted8)) {
+      const three = "Užkerėtojai";
+    }else{three = "";}
+    if ((Third = Weighted9)) {
+      const three = "Artilerijos magai";
+    }else{three = "";}
+    if ((Third = Weighted10)) {
+      const three = "Spartieji magai";
+    }else{three = "";}
+    if ((Third = Weighted11)) {
+      const three = "Mūšio magai";
+    }else{three = "";}
+    if ((Third = Weighted12)) {
+      const three = "Šauliai";
+    }else{three = "";}
+  */
+
+    { label: "Žudikai", value: Weighted1 },
+    { label: "Kovotojas", value: Weighted2 },
+    { label: "Narai", value: Weighted3 },
+    { label: "Griaunamoji jėga", value: Weighted4 },
+    { label: "Avangardai", value: Weighted5 },
+    { label: "Prižiūrėtojai", value: Weighted6 },
+    { label: "Gaudytojai", value: Weighted7 },
+    { label: "Užkerėtojas", value: Weighted8 },
+    { label: "Artilerijos magai", value: Weighted9 },
+    { label: "Spartieji magai", value: Weighted10 },
+    { label: "Mūšio magai", value: Weighted11 },
+    { label: "Šauliai", value: Weighted12 },
